@@ -8,6 +8,9 @@
     "build": "NODE_ENV=production ./build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "husky": {
+    "pre-commit": "npm run build"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,5 +23,8 @@
     "postcss-each": "^0.10.0",
     "postcss-nested": "^4.2.1",
     "prettier": "^2.0.4"
+  },
+  "dependencies": {
+    "husky": "^4.2.5"
   }
 }
