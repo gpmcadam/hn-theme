@@ -9,6 +9,7 @@ const Bundler = require('parcel-bundler');
 const entryFile = path.join(__dirname, 'src', 'style.css');
 
 const defaultOptions = {
+  minify: false,
   sourceMaps: false,
   logLevel: 0
 };
