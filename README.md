@@ -2,6 +2,8 @@
 
 An adaptive (dark/light) CSS theme for HackerNews.
 
+![](screenshot.png)
+
 - minimal changes to the original hackernews layout
 - add a dark theme to hacker news
 - only activates when your OS specifies dark mode
