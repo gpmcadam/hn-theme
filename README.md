@@ -1,21 +1,25 @@
 # Hacker News Theme
 
-- add a dark theme to hacker news, when your OS specifies dark mode
 - minimal changes to the original hackernews layout
+- add a dark theme to hacker news
+- only activates when your OS specifies dark mode
 
 ## Installation
 
-### User Style
+### Chrome, Firefox (UserStyle)
 
 In Chrome, Firefox and other browser which support the Stylus plugin,
 find this style in the usual repo.
 
-### Safari
+Alternatively, install directly by opening the raw file in this repo.
 
-Download the Safari-specific CSS file (`style.safari.css`) and add the custom style.
+### Safari (Cascadea)
 
- 1. In Safari, goto Preferences
- 2. Click **Advanced**
- 3. Under **Stylesheet** click the drop-down menu
- 4. Choose **Other**
- 5. Select the CSS file in the finder dialog
+Support for custom-styles in Safari comes primarily from [Cascadea](https://cascadea.app)
+
+Download the CSS file and add the custom style to Cascadea:
+
+ 1. File
+ 2. Import From
+ 3. URL
+

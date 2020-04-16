@@ -14,9 +14,6 @@ const defaultOptions = {
 };
 
 const targets = {
-  safari: {
-    ...defaultOptions,
-  },
   user: {
     ...defaultOptions,
   },

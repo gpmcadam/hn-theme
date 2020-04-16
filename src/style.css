@@ -1,118 +1,128 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #ff6600;
-    --dark-bg: #323232;
-    --dark-fg: #cfcfcf;
-    --dark-fg-lighter: #999;
-    --font-primary: 'San Franciso', 'Helvetica Nueue', 'Helvetica', arial,
-      sans-serif;
-    --font-size-base: 16px;
-    --font-size-sm: 13px;
-    --color-link: #e0e0e0;
-    --color-link-visited: #757575;
-  }
+/* ==UserStyle==
+@name         hackernews theme
+@namespace    github.com/gpmcadam/hn-theme
+@version      1.0.0
+@license      unlicense
+@preprocessor default
+==/UserStyle== */
 
-  @each $op in (newest, threads, front, newcomments, ask, show, jobs) {
-    html[op='$op'] .pagetop {
-      a[href^='$op'] {
-        &:link,
-        &:visited {
-          color: white;
-          font-weight: bold;
+@-moz-document domain("news.ycombinator.com") {
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #ff6600;
+      --dark-bg: #323232;
+      --dark-fg: #cfcfcf;
+      --dark-fg-lighter: #999;
+      --font-primary: 'San Franciso', 'Helvetica Nueue', 'Helvetica', arial,
+        sans-serif;
+      --font-size-base: 16px;
+      --font-size-sm: 13px;
+      --color-link: #e0e0e0;
+      --color-link-visited: #757575;
+    }
+
+    @each $op in (newest, threads, front, newcomments, ask, show, jobs) {
+      html[op='$op'] .pagetop {
+        a[href^='$op'] {
+          &:link,
+          &:visited {
+            color: white;
+            font-weight: bold;
+          }
         }
       }
     }
-  }
 
-  html[op='news'],
-  html[op='item'],
-  html[op='reply'],
-  html[op] {
-    * {
-      font-family: var(--font-primary);
-      font-size: var(--font-size-base);
-      color: var(--dark-fg);
-    }
-
-    .pagetop a,
-    .pagetop a:visited {
-      color: var(--dark-fg);
-    }
-
-    button,
-    input[type='submit'] {
-      background-image: linear-gradient(-180deg, #656565 0%, #656565 100%);
-      border: 1px solid #333;
-      border-radius: 4px;
-      padding: 0.6rem;
-      font-size: 0.9rem;
-      &:active {
-        background: orangered;
-        color: white;
+    html[op='news'],
+    html[op='item'],
+    html[op='reply'],
+    html[op] {
+      * {
+        font-family: var(--font-primary);
+        font-size: var(--font-size-base);
+        color: var(--dark-fg);
       }
-    }
 
-    input[type='text'],
-    textarea {
-      border: 1px solid #4f4f4f;
-      border-bottom: 1px solid #6d6d6d;
-      background-image: linear-gradient(-180deg, #424242 0%, #454545 100%);
-    }
+      .pagetop a,
+      .pagetop a:visited {
+        color: var(--dark-fg);
+      }
 
-    .itemlist .athing .title {
-      a:link {
+      button,
+      input[type='submit'] {
+        background-image: linear-gradient(-180deg, #656565 0%, #656565 100%);
+        border: 1px solid #333;
+        border-radius: 4px;
+        padding: 0.6rem;
+        font-size: 0.9rem;
+        &:active {
+          background: orangered;
+          color: white;
+        }
+      }
+
+      input[type='text'],
+      textarea {
+        border: 1px solid #4f4f4f;
+        border-bottom: 1px solid #6d6d6d;
+        background-image: linear-gradient(-180deg, #424242 0%, #454545 100%);
+      }
+
+      .itemlist .athing .title {
+        a:link {
+          color: var(--color-link);
+        }
+
+        a:visited {
+          color: var(--color-link-visited);
+        }
+      }
+
+      .c00,
+      .c00 a:link {
         color: var(--color-link);
       }
 
-      a:visited {
-        color: var(--color-link-visited);
+      body {
+        background: #353535;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(-180deg, #424242 0, #353535 60px);
       }
-    }
 
-    .c00,
-    .c00 a:link {
-      color: var(--color-link);
-    }
+      table,
+      tr,
+      td {
+        background: transparent !important;
+      }
 
-    body {
-      background: #353535;
-      background-repeat: no-repeat;
-      background-image: linear-gradient(-180deg, #424242 0, #353535 60px);
-    }
+      .sitebit,
+      .sitebit a,
+      .sitestr,
+      .subtext,
+      .subtext * {
+        font-size: 0.8rem;
+        color: var(--dark-fg-lighter);
+      }
 
-    table,
-    tr,
-    td {
-      background: transparent !important;
-    }
+      .itemlist tr.athing td {
+        padding-top: 0.25rem;
+      }
 
-    .sitebit,
-    .sitebit a,
-    .sitestr,
-    .subtext,
-    .subtext * {
-      font-size: 0.8rem;
-      color: var(--dark-fg-lighter);
-    }
+      .athing > .title:first-child {
+        vertical-align: top;
+        position: relative;
+        top: 6px;
+      }
 
-    .itemlist tr.athing td {
-      padding-top: 0.25rem;
-    }
+      .rank {
+        text-align: right;
+        font-size: 0.6rem;
+        color: var(--dark-fg-lighter);
+      }
 
-    .athing > .title:first-child {
-      vertical-align: top;
-      position: relative;
-      top: 6px;
-    }
-
-    .rank {
-      text-align: right;
-      font-size: 0.6rem;
-      color: var(--dark-fg-lighter);
-    }
-
-    .votelinks {
-      padding: 0 0.25rem;
+      .votelinks {
+        padding: 0 0.25rem;
+      }
     }
   }
 }
