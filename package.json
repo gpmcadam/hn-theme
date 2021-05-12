@@ -20,7 +20,7 @@
     "chalk": "^4.0.0",
     "node-emoji": "^1.10.0",
     "parcel-bundler": "^1.12.4",
-    "postcss": "^7.0.27",
+    "postcss": "^8.2.10",
     "postcss-cssnext": "^3.1.0",
     "postcss-each": "^0.10.0",
     "postcss-nested": "^4.2.1",
